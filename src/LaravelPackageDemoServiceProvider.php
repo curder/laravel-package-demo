@@ -2,9 +2,9 @@
 
 namespace Curder\LaravelPackageDemo;
 
+use Curder\LaravelPackageDemo\Commands\LaravelPackageDemoCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Curder\LaravelPackageDemo\Commands\LaravelPackageDemoCommand;
 
 class LaravelPackageDemoServiceProvider extends PackageServiceProvider
 {

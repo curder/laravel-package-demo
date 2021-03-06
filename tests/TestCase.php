@@ -2,9 +2,9 @@
 
 namespace Curder\LaravelPackageDemo\Tests;
 
+use Curder\LaravelPackageDemo\LaravelPackageDemoServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Curder\LaravelPackageDemo\LaravelPackageDemoServiceProvider;
 
 class TestCase extends Orchestra
 {
