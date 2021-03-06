@@ -12,6 +12,7 @@ class CreateLaravelPackageDemoTable extends Migration
             $table->bigIncrements('id');
 
             $table->string('name')->nullable();
+            $table->json('options')->nullable();
 
             $table->timestamps();
         });

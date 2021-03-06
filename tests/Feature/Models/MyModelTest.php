@@ -3,6 +3,7 @@ namespace Curder\LaravelPackageDemo\Tests\Feature\Models;
 
 use Curder\LaravelPackageDemo\Models\MyModel;
 use Curder\LaravelPackageDemo\Tests\TestCase;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Class MyModelTest
@@ -20,5 +21,15 @@ class MyModelTest extends TestCase
         $this->assertDatabaseCount('my_models', 1);
 
         self::assertEquals('JHON', $model->getUpperCasedName());
+    }
+
+    /** @test */
+    public function it_can_use_json_queries(): void
+    {
+        $models = DB::table('my_models')
+                   ->whereJsonContains('options->languages', 'en')
+                   ->get();
+
+        self::assertCount(0, $models);
     }
 }
