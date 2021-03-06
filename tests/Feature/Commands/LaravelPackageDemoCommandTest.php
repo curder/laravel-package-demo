@@ -17,7 +17,6 @@ class LaravelPackageDemoCommandTest extends TestCase
              ->assertExitCode(0);
     }
 
-
     /** @test */
     public function the_config_file_value_is_used_as_output(): void
     {
