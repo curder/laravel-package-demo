@@ -1,0 +1,59 @@
+{
+    "name": "curder/laravel-package-demo",
+    "description": "laravel-package-demo",
+    "keywords": [
+        "curder",
+        "laravel-package-demo"
+    ],
+    "homepage": "https://github.com/curder/laravel-package-demo",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "curder",
+            "email": "q.curder@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "spatie/laravel-package-tools": "^1.1",
+        "illuminate/contracts": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.3",
+        "spatie/laravel-ray": "^1.9",
+        "vimeo/psalm": "^4.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Curder\\LaravelPackageDemo\\": "src",
+            "Curder\\LaravelPackageDemo\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Curder\\LaravelPackageDemo\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test": "vendor/bin/phpunit --colors=always",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Curder\\LaravelPackageDemo\\LaravelPackageDemoServiceProvider"
+            ],
+            "aliases": {
+                "LaravelPackageDemo": "Curder\\LaravelPackageDemo\\LaravelPackageDemoFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
