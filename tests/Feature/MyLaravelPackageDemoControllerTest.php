@@ -1,9 +1,7 @@
 <?php
 namespace Curder\LaravelPackageDemo\Tests\Feature;
 
-
 use Curder\LaravelPackageDemo\Tests\TestCase;
-use Illuminate\Support\Facades\Route;
 
 class MyLaravelPackageDemoControllerTest extends TestCase
 {
