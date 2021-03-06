@@ -12,6 +12,8 @@ class LaravelPackageDemoCommand extends Command
 
     public function handle()
     {
-        $this->comment('All done');
+        $output_text = config('package-demo.command_output_text');
+
+        $this->comment($output_text);
     }
 }
