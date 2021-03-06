@@ -21,5 +21,4 @@ class MyModelTest extends TestCase
 
         self::assertEquals('JHON', $model->getUpperCasedName());
     }
-
 }
