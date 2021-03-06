@@ -38,7 +38,7 @@ return [
 ## Usage
 
 ```php
-$laravel_package_demo = new Curder\LaravelPackageDemo();
+$laravel_package_demo = new \Curder\LaravelPackageDemo();
 echo $laravel_package_demo->echoPhrase('Hello, Curder!');
 ```
 
