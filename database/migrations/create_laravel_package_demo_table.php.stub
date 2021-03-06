@@ -8,12 +8,17 @@ class CreateLaravelPackageDemoTable extends Migration
 {
     public function up()
     {
-        Schema::create('laravel-package-demo_table', function (Blueprint $table) {
+        Schema::create('my_models', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            // add fields
+            $table->string('name')->nullable();
 
             $table->timestamps();
         });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('my_models');
     }
 }
