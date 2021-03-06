@@ -4,6 +4,7 @@ namespace Curder\LaravelPackageDemo\Tests;
 
 use Curder\LaravelPackageDemo\LaravelPackageDemoServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Schema;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -16,6 +17,8 @@ class TestCase extends Orchestra
         Factory::guessFactoryNamesUsing(
             fn (string $modelName) => 'Curder\\LaravelPackageDemo\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
+
+        Route::laravelPackageDemo('laravel-package-demo/prefix/test');
     }
 
     protected function getPackageProviders($app) : array

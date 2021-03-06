@@ -18,6 +18,7 @@ class LaravelPackageDemoServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-package-demo')
             ->hasConfigFile()
+            ->hasRoute('laravel-package-demo')
             ->hasViews()
             ->hasMigration('create_laravel_package_demo_table')
             ->hasCommand(LaravelPackageDemoCommand::class);

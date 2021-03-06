@@ -32,14 +32,29 @@ This is the contents of the published config file:
 
 ```php
 return [
+    /**
+     * This is the text what will be output by the package command.
+     */
+    'command_output_text' => 'Hi from command',
+
+    'another_option' => 'Another value',
 ];
 ```
 
+You can publish the view files with:
+```bash
+php artisan vendor:publish --provider="Curder\LaravelPackageDemo\LaravelPackageDemoServiceProvider" --tag="laravel-package-demo-views"
+```
+
+
 ## Usage
 
+customize route prefix, you should in routes of application
+
 ```php
-$laravel_package_demo = new \Curder\LaravelPackageDemo();
-echo $laravel_package_demo->echoPhrase('Hello, Curder!');
+use Illuminate\Support\Facades\Route;
+
+Route::laravelPackageDemo('your/customize/prefix');
 ```
 
 ## Testing
