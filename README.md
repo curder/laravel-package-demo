@@ -8,6 +8,9 @@
 
 This is a laravel package, and it is a demo for study.
 
+- laravel命令行测试 [curder/laravel-console-command-test-demo](https://github.com/curder/laravel-console-command-test-demo)
+- php 拓展包 [curder/php-package-demo](https://github.com/curder/php-package-demo)
+
 ## Installation
 
 You can install the package via composer:
